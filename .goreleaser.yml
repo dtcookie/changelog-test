@@ -48,11 +48,7 @@ release:
   header: |
     ## Some title ({{ .Date }})
 
-    Welcome to this new release!
-  footer: |
-    ## Thanks!
-
-    Those were the changes on {{ .Tag }}!    
+    Welcome to this new release!  
   # If you want to manually examine the release before its live, uncomment this line:
   # draft: true
 changelog:
