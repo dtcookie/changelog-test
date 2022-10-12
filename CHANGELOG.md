@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Entry B
 - Entry C
 
-## [1.0.10] - 2022-10-12
+## [1.0.12] - 2022-10-12
 ### Added
 - Entry v1.0.10-A
 - Entry v1.0.10-B
