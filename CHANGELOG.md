@@ -10,7 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Entry B
 - Entry C
 
-## [v1.0.5] - 2022-10-12
+## [1.0.6] - 2022-10-12
+### Added
+- Entry v1.0.6-A
+- Entry v1.0.6-B
+- Entry v1.0.6-C
+### Changed
+- Entry v1.0.6-D
+- Entry v1.0.6-E
+- Entry v1.0.6-F
+
+## [1.0.5] - 2022-10-12
 ### Added
 - Entry v1.0.5-A
 - Entry v1.0.5-B
@@ -20,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Entry v1.0.5-E
 - Entry v1.0.5-F
 
-## [v1.0.4] - 2022-10-12
+## [1.0.4] - 2022-10-12
 ### Added
 - New visual identity by [@tylerfortune8](https://github.com/tylerfortune8).
 - Version navigation.
