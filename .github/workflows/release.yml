@@ -24,13 +24,32 @@ jobs:
         id: import_gpg
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}          
+          passphrase: ${{ secrets.PASSPHRASE }}
+      -
+        name: Get version from tag
+        id: tag_name
+        run:   echo ::set-output name=current_version::${GITHUB_REF#refs/tags/v}
+        shell: bash          
+      -
+        name: Get Changelog Entry
+        id: changelog_reader
+        uses: mindsers/changelog-reader-action@v2
+        with:
+          version: ${{ steps.tag_name.outputs.current_version }}
+          path: ./CHANGELOG.md
+      -
+        name: Save ChangeLog to file
+        id: save_changes
+        run: |
+          echo ::set-output name=changesfile::$(mktemp)
+          echo "${{ steps.changelog_reader.outputs.changes }}" ${{ steps.save_changes.outputs.changesfile }}
+        shell: bash          
       -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v3.1.0
         with:
           version: latest
-          args: release --rm-dist --release-notes CHANGELOG.md
+          args: release --rm-dist --release-notes ${{ steps.save_changes.outputs.changesfile }}
         env:
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
