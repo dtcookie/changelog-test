@@ -45,10 +45,6 @@ signs:
       - "--detach-sign"
       - "${artifact}"
 release:
-  header: |
-    ## Some title ({{ .Date }})
-
-    Welcome to this new release!  
   # If you want to manually examine the release before its live, uncomment this line:
   # draft: true
 changelog:

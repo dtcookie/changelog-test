@@ -10,15 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Entry B
 - Entry C
 
-## [1.0.12] - 2022-10-12
-### Added
-- Entry v1.0.10-A
-- Entry v1.0.10-B
-- Entry v1.0.10-C
-### Changed
-- Entry v1.0.10-D
-- Entry v1.0.10-E
-- Entry v1.0.10-F
+## [1.0.13] - 2022-10-13
+### Fixed Issues
+* #145/#138: Export of `dynatrace_maintenance_window` unusable for specific configuration settings
+* #136: Data Source `dynatrace_synthetic_location` did not provide the correct location
+* #144: Applying a `dynatrace_browser_monitor` can lead to crash of the provider
+* #121: Export of  `dynatrace_dashboard_sharing` refers hardcoded to the dashboard ID of the source dashboard
+### Improved Documentation
+In addition to these fixes we have also begun on improving the documentation for supported resources. Check out the current documentation for [dynatrace_queue_manager](https://registry.terraform.io/providers/dynatrace-oss/dynatrace/latest/docs/resources/queue_manager). Please don't hesitate to provide feedback here. We're planning to streamline resource documentation based on how `dynatrace_queue_manager` looks like right now.
 
 ## [1.0.7] - 2022-10-12
 ### Added
